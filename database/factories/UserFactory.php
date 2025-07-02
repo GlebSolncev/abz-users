@@ -16,13 +16,12 @@ class UserFactory extends Factory
 
     public function definition()
     {
-        $gender      = $this->faker->randomElement(['men', 'women']);
-        $photoNumber = $this->faker->numberBetween(1, 99);
-        $photoUrl    = "https://randomuser.me/api/portraits/{$gender}/{$photoNumber}.jpg";
-        Storage::disk('public')->put('te', $photoUrl);
+        $firstName = $this->faker->firstName();
+        $lastName = $this->faker->lastName();
+        $photoUrl = "https://api.dicebear.com/7.x/avataaars/jpg?seed={$firstName}&size=70";
 
         return [
-            'name'                   => $this->faker->name(),
+            'name'                   => sprintf('%s %s', $firstName, $lastName),
             'email'                  => $this->faker->unique()->safeEmail(),
             'phone'                  => '+380' . $this->faker->numerify('#########'),
             'position_id'            => Position::inRandomOrder()->first()->id,
