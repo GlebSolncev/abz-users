@@ -26,12 +26,6 @@ A simple Laravel 12 + Vue 3 application for managing users. Provides endpoints
 - **firebase/php-jwt** — encode/decode JWT tokens
 - **tinify/tinify** — TinyPNG image optimization client
 
-### npm
-- **vue** — JavaScript UI framework
-- **vite** — frontend build tool
-- **tailwindcss** — utility‑first CSS framework
-- **eslint** (dev) — JavaScript linting
-
 ## Installation
 
 ### 1. Clone & Dependencies
@@ -40,11 +34,25 @@ A simple Laravel 12 + Vue 3 application for managing users. Provides endpoints
 git clone https://github.com/your-org/your-repo.git
 cd your-repo
 ```
-
-
 # Backend dependencies
 ```bash
 composer install
+```
+# Copy env
+```bash
+cp .env.example .env
+```
+# DB migrate
+```bash
+php artisan migrate
+```
+# Key generate
+```bash
+php artisan key:generate
+```
+# Serve
+```bash
+php artisan serve
 ```
 
 
