@@ -13,12 +13,9 @@ A simple Laravel 12 + Vue 3 application for managing users. Provides endpoints
 - **Database:** MySQL
 - **Testing:** PHPUnit, Mockery
 
-### Frontend
-- **Framework:** Vue 3
+### Frontend(SPA)
+- **Framework:** Vue 3 
 - **Bundler:** Vite
-- **Styling:** Tailwind CSS
-- **HTTP:** Fetch API
-- **Build Tools:** npm, ESLint
 
 ## Third‑Party Libraries
 
